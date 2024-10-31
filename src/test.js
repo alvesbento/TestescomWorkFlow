@@ -7,20 +7,20 @@ describe('SWAPI Starship Tests', () => {
         expect(response.data.count).toBeGreaterThan(0);
     });
 
-    // test('Get a specific starship by name', async () => {
-    //     // Obtendo a lista de naves
-    //     const starshipsResponse = await axios.get('https://swapi.dev/api/starships/');
+    test('Get a specific starship by name', async () => {
+        // Obtendo a lista de naves
+        const starshipsResponse = await axios.get('https://swapi.dev/api/starships/');
         
-    //     // Buscando a nave pela nome "Millennium Falcon"
-    //     const starship = starshipsResponse.data.results.find(starship => starship.name === 'Millennium Falcon');
+        // Buscando a nave pela nome "Millennium Falcon"
+        const starship = starshipsResponse.data.results.find(starship => starship.name === 'Millennium Falcon');
     
-    //     expect(starship).toBeDefined(); // Verifica se a nave foi encontrada
+        expect(starship).toBeDefined(); // Verifica se a nave foi encontrada
     
-    //     // Fazendo a requisição para a URL da nave
-    //     const response = await axios.get(starship.url);
-    //     expect(response.status).toBe(200); // Verifica se o status da resposta é 200
-    //     expect(response.data.name).toBe('Millennium Falcon'); // Verifica se o nome é correto
-    // });
+        // Fazendo a requisição para a URL da nave
+        const response = await axios.get(starship.url);
+        expect(response.status).toBe(200); // Verifica se o status da resposta é 200
+        expect(response.data.name).toBe('Millennium Falcon'); // Verifica se o nome é correto
+    });
 }); 
     
     // test('Get list of starships', async () => {
