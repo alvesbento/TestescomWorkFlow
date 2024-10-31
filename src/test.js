@@ -67,8 +67,8 @@ describe('SWAPI Starship Tests', () => {
         expect(response.data.name).toBe('Human');
     });
     
-    // test('Get list of vehicles', async () => {
-    //     const response = await axios.get('https://swapi.dev/api/vehicles/');
-    //     expect(response.status).toBe(200);
-    //     expect(response.data.count).toBeGreaterThan(0);
-    // });
+    test('Get list of vehicles', async () => {
+        const response = await axios.get('https://swapi.dev/api/vehicles/');
+        expect(response.status).toBe(200);
+        expect(response.data.count).toBeGreaterThan(0);
+    });
