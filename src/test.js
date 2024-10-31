@@ -23,11 +23,11 @@ describe('SWAPI Starship Tests', () => {
     });
 }); 
     
-    // test('Get list of starships', async () => {
-    //     const response = await axios.get('https://swapi.dev/api/starships/');
-    //     expect(response.status).toBe(200);
-    //     expect(response.data.count).toBeGreaterThan(0);
-    // });
+    test('Get list of starships', async () => {
+        const response = await axios.get('https://swapi.dev/api/starships/');
+        expect(response.status).toBe(200);
+        expect(response.data.count).toBeGreaterThan(0);
+    });
     
     // test('Get a specific starship by ID', async () => {
     //     const response = await axios.get('https://swapi.dev/api/starships/10/');
