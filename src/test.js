@@ -55,11 +55,11 @@ describe('SWAPI Starship Tests', () => {
         }
     });
     
-    // test('Get list of species', async () => {
-    //     const response = await axios.get('https://swapi.dev/api/species/');
-    //     expect(response.status).toBe(200);
-    //     expect(response.data.count).toBeGreaterThan(0);
-    // });
+    test('Get list of species', async () => {
+        const response = await axios.get('https://swapi.dev/api/species/');
+        expect(response.status).toBe(200);
+        expect(response.data.count).toBeGreaterThan(0);
+    });
     
     // test('Get a specific species by ID', async () => {
     //     const response = await axios.get('https://swapi.dev/api/species/1/');
