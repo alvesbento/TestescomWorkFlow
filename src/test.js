@@ -47,13 +47,13 @@ describe('SWAPI Starship Tests', () => {
         expect(response.data.title).toBe('A New Hope');
     });
     
-    // test('Get a non-existent route', async () => {
-    //     try {
-    //         await axios.get('https://swapi.dev/api/heroes/');
-    //     } catch (error) {
-    //         expect(error.response.status).toBe(404);
-    //     }
-    // });
+    test('Get a non-existent route', async () => {
+        try {
+            await axios.get('https://swapi.dev/api/heroes/');
+        } catch (error) {
+            expect(error.response.status).toBe(404);
+        }
+    });
     
     // test('Get list of species', async () => {
     //     const response = await axios.get('https://swapi.dev/api/species/');
