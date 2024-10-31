@@ -41,11 +41,11 @@ describe('SWAPI Starship Tests', () => {
         expect(response.data.count).toBeGreaterThan(0);
     });
     
-    // test('Get a specific film by ID', async () => {
-    //     const response = await axios.get('https://swapi.dev/api/films/1/');
-    //     expect(response.status).toBe(200);
-    //     expect(response.data.title).toBe('A New Hope');
-    // });
+    test('Get a specific film by ID', async () => {
+        const response = await axios.get('https://swapi.dev/api/films/1/');
+        expect(response.status).toBe(200);
+        expect(response.data.title).toBe('A New Hope');
+    });
     
     // test('Get a non-existent route', async () => {
     //     try {
